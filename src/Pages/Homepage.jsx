@@ -1,12 +1,13 @@
 import React from 'react'
 import Autocrausel from '../Components/Autocrausal'
 import { Box, Button, Flex } from '@chakra-ui/react'
+import { keyframes } from '@emotion/react';
 
 const Homepage = () => {
 
   const handleWhatsAppChat = () => {
     // Replace 'YOUR_PHONE_NUMBER' with the actual phone number you want to chat with
-    const phoneNumber = '7607147144';
+    const phoneNumber = '8744857352';
     
     // Constructing the WhatsApp chat link with the phone number
     const whatsappChatLink = `https://wa.me/${phoneNumber}`;
@@ -14,38 +15,66 @@ const Homepage = () => {
     // Open the WhatsApp chat link in a new window
     window.open(whatsappChatLink, '_blank');
 };
+const shakeAnimation = keyframes`
+  0% { transform: translateX(0) rotate(0); background-color: #1e90ff; }
+  25% { transform: translateX(-5px) rotate(-2deg); background-color: #a5d3d0; }
+  50% { transform: translateX(5px) rotate(2deg); background-color: #1e90ff; }
+  75% { transform: translateX(-3px) rotate(-1deg); background-color: #a5d3d0; }
+  100% { transform: translateX(3px) rotate(1deg); background-color: #1e90ff; }
+`;
 
   return (
     <>
     <div style={{display:'flex', marginTop:"70px"}}>
       <Autocrausel />
-      <Box p="4" mt={'2%'} >
-    <h2 style={{ fontSize: '32px', marginBottom: '16px', color: '#3182ce' , fontWeight: 'bold'}}>Ayurvedic Power Of Thor Capsule For Sex Time Medicine For Men</h2>
-    <p style={{ fontSize: '18px', marginBottom: '12px' }}>Price: <del>Rs. 1,299.00</del> <strong style={{ color: 'green' }}>Rs. 649.00</strong> (50% OFF)</p>
+      <Box p="4" mt={'2%'} w={'45%'} >
+    <h2 style={{ fontSize: '22px', marginBottom: '16px' , fontWeight: 'bold', fontFamily:'arial'}}>Ayurvedic Power Of Thor Capsule For Sex Time Medicine For Men</h2>
+    <p style={{ fontSize: '18px', marginBottom: '12px' }}>Price: <del>Rs. 2,499.00</del> <strong style={{ color: 'green' }}>Rs. 1200.00</strong> (50% OFF)</p>
     <p style={{ fontSize: '20px', marginBottom: '16px' }}><strong>🔥 BUY 1 GET 1 FREE 🔥</strong></p>
-    <p style={{ fontSize: '18px', marginBottom: '20px' }}>Get your confidence back with your hair with our natural Adivasi Herbal Hair Oil!</p>
-    <Button onClick={handleWhatsAppChat} colorScheme="blue" size="lg" _hover={{ bg: 'green.500', color: 'white', transform: 'scale(1.05)', boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)' }}>Order Now - Cash on Delivery</Button>
+    <p style={{ fontSize: '16px', marginBottom: '20px' }}>Unleash Your Inner Strength: TSA Power Of Thor Capsule - Elevating Men's Vitality and Performance</p>
+    <Button
+  onClick={handleWhatsAppChat}
+  color="white"
+  bg="blue.500"
+  size="lg"
+  _hover={{
+    bg: 'green.500',
+    color: 'white',
+    transform: 'scale(1.05)',
+    boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+  }}
+  _active={{
+    transform: 'scale(0.95)',
+  }}
+  _focus={{
+    outline: 'none', // Remove default focus outline
+  }}
+  css={{
+    animation: `${shakeAnimation} 0.5s ease`, // Decreased animation duration to 0.2s
+    animationIterationCount: 'infinite',
+    animationDelay: '0.1s', // Decreased animation delay to 0.1s
+  }}
+>
+  Order Now
+</Button>
+
      </Box>
     </div>
-    {/* <div style="display: flex; justify-content: space-between; margin: 2%;">
-  <div style="width: 30%;">
-    <h2 style="font-weight: bold;">Adivasi Herbal Hair Oil</h2>
-  </div>
-  <div style="width: 65%;">
-    <p style="text-align: justify; margin-bottom: 10px;">
-      Adivasi Herbal Hair Oil is basically made by purely Adivasi ayurvedic herbs which effectively prevent the hairs fall and help to grow long hairs with no side effect. This Hair Oil is used for Hair Problems like Hair Loss, Dandruff, Hair Growth, Grey Hair, New Hair Alopecia Dry Hair Spit Ends Dull Hair Frizzy Hair. Use this Oil 2 to 3 times a week. Used to make your Hair and to control Dandruff. Apply the oil 2 to 3 times a week Before Bath to stop the Dandruff And Healthy long Hair.
-    </p>
-    <h2 style="font-weight: bold;">CONTAINS:</h2>
-    <p style="text-align: justify; margin-bottom: 10px;">
-      The powerful blend of 101 rare herbs including Neelambari, Bringraj, Amla, Aloe vera, Tulsi, dasawala, jetamasi lavancha, kasturi, changalkushtu, baniman tree, lotus flower, indigo plants, athimadura, net grass, Loliswala, Soapnut extra Helps in controlling hair loss & actively stimulates new hair growth. Fresh herbs are curated from the dense forest of NAAGARAHOLE forest (Mysore).
-    </p>
-    <h2 style="font-weight: bold;">DIRECTION TO USE:</h2>
-    <p style="text-align: justify;">
-      Apply Thoroughly & Deeply hair roots and Leave Over Night for Good Results. Use at least 3 days per week for Better Results.
-    </p>
-  </div>
-</div> */}
-
+    <div style={{ width: '90%', margin: '50px auto' ,display:'flex',fontFamily:'arial'}}>
+      
+ <h2 style={{fontFamily:'arial', fontWeight:'bold',width: '50%'}}>Product Description :</h2>
+  <p style={{fontFamily:'arial',justifyContent:'left'}}>DS Ayurweda Power Of Thor Capsule For Men it can be beneficial for maintaining men well being and boost their energy, stamina, and endurance helps to fight weakness and increase energy May assist in the management of testosterone level. It improves circulation and physical performance</p>
+    
+ 
+</div>
+<div style={{ width: '90%', margin: '20px auto' ,display:'flex',fontFamily:'arial'}}>
+      
+      <h2 style={{fontFamily:'arial', fontWeight:'bold'}}>Dosage :</h2>
+       <p style={{fontFamily:'arial',justifyContent:'left'}}>1 capsule twice a day or as directed by the physician</p>
+         
+      
+     </div>
 
     </>
   )

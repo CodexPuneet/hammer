@@ -1,7 +1,8 @@
 import React from 'react'
 import { Route, Routes } from "react-router-dom";
 import Homepage from '../Pages/Homepage';
-import Cart from '../Pages/Cart';
+import AboutUs from '../Pages/About';
+import ContactUs from '../Pages/Contact';
 
 
 const AllRoutes = () => {
@@ -9,7 +10,8 @@ const AllRoutes = () => {
     <div>
   <Routes>
     <Route path="/" element={<Homepage />} />
-    <Route path="/cart" element={<Cart />} />
+    <Route path="/about" element={<AboutUs />} />
+    <Route path="/contact" element={<ContactUs />} />
   </Routes>
    </div>
   )
