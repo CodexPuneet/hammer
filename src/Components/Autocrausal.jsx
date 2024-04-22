@@ -5,7 +5,6 @@ import heroimage from '../Assets/banner.png';
 import heroimage2 from '../Assets/banner2.png';
 import heroimage3 from '../Assets/banner3.png';
 import heroimage4 from '../Assets/banner4.png';
-import heroimage5 from '../Assets/banner5.png';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -44,9 +43,6 @@ export default function Autocrausel() {
         <img src={heroimage3}></img> </SwiperSlide>
         <SwiperSlide>
         <img src={heroimage4}></img>
-        </SwiperSlide>
-        <SwiperSlide>
-            <img src={heroimage5} />
         </SwiperSlide>
       </Swiper>
     </Box>

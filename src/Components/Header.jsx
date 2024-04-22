@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../Assets/logo.png';
+import logo from '../Assets/DS_logo.png';
 
 const Header = () => {
   return (
@@ -38,12 +38,12 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'space-between',
     padding: '0px 20px',
-    backgroundColor: '#d9d9d9',
+    backgroundColor: '#a5d3d0',
     color: '#fff',
   },
   logo: {
     width: '90px', // Adjust as needed
-    height: '70px',
+    height: '80px',
   },
   navList: {
     listStyle: 'none',

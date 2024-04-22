@@ -20,7 +20,7 @@ const Homepage = () => {
     <div style={{display:'flex', marginTop:"70px"}}>
       <Autocrausel />
       <Box p="4" mt={'2%'} >
-    <h2 style={{ fontSize: '32px', marginBottom: '16px', color: '#3182ce' , fontWeight: 'bold'}}> Ayurvedic Herbal Adivasi Hair Oil</h2>
+    <h2 style={{ fontSize: '32px', marginBottom: '16px', color: '#3182ce' , fontWeight: 'bold'}}>Ayurvedic Power Of Thor Capsule For Sex Time Medicine For Men</h2>
     <p style={{ fontSize: '18px', marginBottom: '12px' }}>Price: <del>Rs. 1,299.00</del> <strong style={{ color: 'green' }}>Rs. 649.00</strong> (50% OFF)</p>
     <p style={{ fontSize: '20px', marginBottom: '16px' }}><strong>🔥 BUY 1 GET 1 FREE 🔥</strong></p>
     <p style={{ fontSize: '18px', marginBottom: '20px' }}>Get your confidence back with your hair with our natural Adivasi Herbal Hair Oil!</p>
