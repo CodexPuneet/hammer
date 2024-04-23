@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../Assets/DS_logo.png';
+import './Header.css';
 
 const Header = () => {
   return (
@@ -61,3 +62,4 @@ const styles = {
     fontSize: '16px',
   },
 };
+

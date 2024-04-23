@@ -1,0 +1,40 @@
+/* Header.css */
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px; /* Adjusted padding for smaller screens */
+    background-color: #a5d3d0;
+    color: #fff;
+    flex-direction: column; /* Flex direction column for smaller screens */
+  }
+  
+  .logo {
+    width: 90px;
+    height: 80px;
+    margin-bottom: 20px; /* Added margin bottom for spacing */
+  }
+  
+  .navList {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navItem {
+    margin-left: 20px;
+    margin-bottom: 10px; /* Added margin bottom for spacing */
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+ 
+  

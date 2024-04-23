@@ -2,25 +2,29 @@ import React from 'react'
 import Autocrausel from '../Components/Autocrausal'
 import { Box, Button, Flex } from '@chakra-ui/react'
 import { keyframes } from '@emotion/react';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import heroimage5 from '../Assets/banner5.png';
 
 const Homepage = () => {
 
   const handleWhatsAppChat = () => {
-    // Replace 'YOUR_PHONE_NUMBER' with the actual phone number you want to chat with
-    const phoneNumber = '8744857352';
-    
-    // Constructing the WhatsApp chat link with the phone number
+    const phoneNumber = '918744857352'; // Example: India country code is 91
     const whatsappChatLink = `https://wa.me/${phoneNumber}`;
     
-    // Open the WhatsApp chat link in a new window
-    window.open(whatsappChatLink, '_blank');
+    // Try opening the WhatsApp chat link in a new window
+    const newWindow = window.open(whatsappChatLink, '_blank');
+
+    // If the new window couldn't be opened, show a fallback message
+    if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+        alert('Please manually open WhatsApp and initiate a chat with the provided phone number.');
+    }
 };
 const shakeAnimation = keyframes`
-  0% { transform: translateX(0) rotate(0); background-color: #1e90ff; }
-  25% { transform: translateX(-5px) rotate(-2deg); background-color: #a5d3d0; }
-  50% { transform: translateX(5px) rotate(2deg); background-color: #1e90ff; }
-  75% { transform: translateX(-3px) rotate(-1deg); background-color: #a5d3d0; }
-  100% { transform: translateX(3px) rotate(1deg); background-color: #1e90ff; }
+  0% { transform: translateX(0) rotate(0);  }
+  25% { transform: translateX(-5px) rotate(-2deg); }
+  50% { transform: translateX(5px) rotate(2deg);  }
+  75% { transform: translateX(-3px) rotate(-1deg);  }
+  100% { transform: translateX(3px) rotate(1deg);  }
 `;
 
   return (
@@ -35,7 +39,7 @@ const shakeAnimation = keyframes`
     <Button
   onClick={handleWhatsAppChat}
   color="white"
-  bg="blue.500"
+  bg="#25D366"
   size="lg"
   _hover={{
     bg: 'green.500',
@@ -56,25 +60,82 @@ const shakeAnimation = keyframes`
     animationDelay: '0.1s', // Decreased animation delay to 0.1s
   }}
 >
+<WhatsAppIcon style={{ marginRight: '8px' }} />
   Order Now
 </Button>
 
      </Box>
     </div>
-    <div style={{ width: '90%', margin: '50px auto' ,display:'flex',fontFamily:'arial'}}>
-      
- <h2 style={{fontFamily:'arial', fontWeight:'bold',width: '50%'}}>Product Description :</h2>
-  <p style={{fontFamily:'arial',justifyContent:'left'}}>DS Ayurweda Power Of Thor Capsule For Men it can be beneficial for maintaining men well being and boost their energy, stamina, and endurance helps to fight weakness and increase energy May assist in the management of testosterone level. It improves circulation and physical performance</p>
-    
+    <div style={{ width: '50%', textAlign: 'center', margin:'0 0 0 40%' }}>
+  <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+    <tbody>
+      <tr>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>Form</td>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>Capsule</td>
+      </tr>
+      <tr>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>Packaging type</td>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>Bottle</td>
+      </tr>
+      <tr>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>Packaging size</td>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>30 Capsules</td>
+      </tr>
+      <tr>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>Brand</td>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>DS Ayurweda</td>
+      </tr>
+      <tr>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>Composition</td>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>Natural Ingredients Shatavari, Safed musli, Ashwagandha, Pipla Mool, Trikatu, Gokhru, Aloe Vera</td>
+      </tr>
+      <tr>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>Direction of use</td>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>1 Capsule twice a day or as directed by the physician</td>
+      </tr>
+      <tr>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>Prescription</td>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>No</td>
+      </tr>
+      <tr>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>Shelf life</td>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>36 months</td>
+      </tr>
+      <tr>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>Maximum Order Quantity/User</td>
+        <td style={{ border: '2px solid black', padding: '5px', fontWeight: 'bold' }}>100 Bottle</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div style={{width: '350px',
+            height: '350px',
+            display: 'flex',
+            margin: '20px auto',
+            border: '5px solid #cc9955'
+           }}>
+         
+  <img src={heroimage5} />
+</div>
+
+
+    <div style={{ fontFamily: 'arial', padding: '10px', display: 'flex' }}>
+  <div style={{ flex: '1', marginRight: '20px' }}>
+    <div style={{ marginBottom: '10px' }}>
+      <div style={{ fontWeight: 'bold', marginBottom: '5px' }}>Product Description :</div>
+      <div>DS Ayurveda Power Of Thor Capsule For Men. It can be beneficial for maintaining men's well-being and boost their energy, stamina, and endurance. Helps to fight weakness and increase energy. May assist in the management of testosterone levels. It improves circulation and physical performance.</div>
+    </div>
+    <div style={{ marginBottom: '10px' }}>
+      <div style={{ fontWeight: 'bold', marginBottom: '5px' }}>Dosage :</div>
+      <div>1 capsule twice a day or as directed by the physician.</div>
+    </div>
+  </div>
  
 </div>
-<div style={{ width: '90%', margin: '20px auto' ,display:'flex',fontFamily:'arial'}}>
-      
-      <h2 style={{fontFamily:'arial', fontWeight:'bold'}}>Dosage :</h2>
-       <p style={{fontFamily:'arial',justifyContent:'left'}}>1 capsule twice a day or as directed by the physician</p>
-         
-      
-     </div>
+
+
+
+
 
     </>
   )
