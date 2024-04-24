@@ -11,7 +11,7 @@ function App() {
      <Header />
      <Navbar />
      <AllRoutes />
-     {/* <Footer/> */}
+     <Footer/>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 .contact-us-container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 15px auto;
     padding: 40px;
     background-color: #f7f7f7;
     border-radius: 10px;
@@ -72,4 +72,55 @@
   .contact-form button:hover {
     background-color: #293e69;
   }
-  
+ /* In ContactUs.css */
+.delivery-info {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.delivery-info h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.delivery-info p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.delivery-info p:last-child {
+  margin-bottom: 0;
+}
+
+/* Emphasize points */
+.delivery-info .emphasize {
+  font-weight: bold;
+  color: #20f0e2; /* Blue color for emphasis */
+  position: relative;
+  overflow: hidden;
+}
+
+.delivery-info .emphasize::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #a5d3d0); /* Gradient from transparent to blue */
+  animation: slide 2s linear infinite; /* Animation */
+}
+
+@keyframes slide {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}

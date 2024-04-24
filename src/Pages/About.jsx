@@ -7,7 +7,7 @@ const AboutUs = () => {
     <div className="about-us-container">
       <div className="header">
         <h1><span className="company-name">DS Ayurveda</span></h1>
-        <img className="logo" src={logo} alt="DS Ayurveda Logo" />
+        <img className="ab_logo" src={logo} alt="DS Ayurveda Logo" />
       </div>
       <div className="company-details">
         <p><strong>Company Name:</strong> DS Ayurveda</p>

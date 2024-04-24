@@ -1,5 +1,6 @@
 import React from 'react';
 import './ContactUs.css'; // Import CSS file for styling
+import women from '../Assets/women.png';
 
 const ContactUs = () => {
   return (
@@ -7,6 +8,13 @@ const ContactUs = () => {
       <div className="header">
         <h1>Contact Us</h1>
         <p>Have questions or feedback? We'd love to hear from you!</p>
+        <img className='image_women' src={women}  />
+        <div className="delivery-info">
+        <h2>Secret Delivery Available!</h2>
+        <p>Order any package and receive secret delivery all over India.</p>
+        <p className="emphasize">Cash on Delivery</p>
+       <p className="emphasize">Instant Delivery options available!</p>
+      </div>
       </div>
       <div className="contact-details">
         <h2>Reach Out to Us</h2>
@@ -27,6 +35,7 @@ const ContactUs = () => {
           <button type="submit">Send Message</button>
         </form>
       </div>
+    
     </div>
   );
 }
