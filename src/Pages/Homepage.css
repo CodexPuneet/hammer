@@ -1,0 +1,48 @@
+.homepage-container {
+    display: flex;
+    margin-top: 70px;
+  }
+  .homepage-data{
+    padding: 4px;
+    margin-top: 2%;
+    width: 45%;
+  }
+  .homepage-table{
+    width: 50%;
+    margin: 0 0 0 40%;
+    text-align: center;
+  }
+  .hompage-banner{
+    width: 350px;
+    height:350px;
+    margin: 20px auto;
+    border: 5px solid #cc9955;
+      
+  }
+  
+  /* Add your CSS styles here */
+  @media only screen and (max-width: 600px) {
+
+     .homepage-container {
+        flex-direction: column;
+        margin-top: 20px;
+      }
+      .homepage-data{
+        padding: 4px;
+        margin-top: 2%;
+        width: 90%;
+        margin: 0 auto;
+      }
+      .homepage-table{
+        width: 90%;
+        margin: 20px auto;
+        text-align: center;
+      }
+      .hompage-banner{
+        width: 90%;
+        height:auto;
+        margin: 20px auto;
+        border: 5px solid #cc9955;
+          
+      }
+    }

@@ -1,65 +1,63 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../Assets/DS_logo.png';
-import './Header.css';
+import './Header.css'; // Import the CSS file for styles
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+} from '@chakra-ui/react'
+import DehazeIcon from '@mui/icons-material/Dehaze';
+
 
 const Header = () => {
   return (
-    <div style={styles.container}>
+    <div className="container">
       {/* Logo */}
-      <img src={logo} alt="Logo" style={styles.logo} />
+      <img src={logo} alt="Logo" className="logo" />
 
       {/* Navigation */}
       <nav>
-        <ul style={styles.navList}>
-          <li style={styles.navItem}>
-            <Link to="/" style={styles.navLink}>Home</Link>
+        <ul className="navList">
+          <li className="navItem">
+            <Link to="/" className="navLink">Home</Link>
           </li>
-          <li style={styles.navItem}>
-            <Link to="/about" style={styles.navLink}>About</Link>
+          <li className="navItem">
+            <Link to="/about" className="navLink">About</Link>
           </li>
-          <li style={styles.navItem}>
-            <Link to="/services" style={styles.navLink}>Services</Link>
+          <li className="navItem">
+            <Link to="/services" className="navLink">Services</Link>
           </li>
-          <li style={styles.navItem}>
-            <Link to="/contact" style={styles.navLink}>Contact</Link>
+          <li className="navItem">
+            <Link to="/contact" className="navLink">Contact</Link>
           </li>
         </ul>
       </nav>
+      <div className='mobilemenu'>
+      <Menu >
+        <MenuButton as="button" className="navLink">
+       <DehazeIcon />
+        </MenuButton>
+        <MenuList style={{ backgroundColor: '#a5d3d0', width: '50px'   }}>
+          <MenuItem style={{ backgroundColor: '#a5d3d0' }}>
+            <Link to="/" className="navLink">Home</Link>
+          </MenuItem>
+          <MenuItem style={{ backgroundColor: '#a5d3d0' }}>
+            <Link to="/about" className="navLink">About</Link>
+          </MenuItem>
+          <MenuItem style={{ backgroundColor: '#a5d3d0' }}>
+            <Link to="/contact" className="navLink">Contact</Link>
+          </MenuItem>
+        </MenuList>
+      </Menu>
+      </div>
     </div>
   );
 }
 
 export default Header;
-
-// Styles
-const styles = {
-  container: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    padding: '0px 20px',
-    backgroundColor: '#a5d3d0',
-    color: '#fff',
-  },
-  logo: {
-    width: '90px', // Adjust as needed
-    height: '80px',
-  },
-  navList: {
-    listStyle: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    margin: 0,
-    padding: 0,
-  },
-  navItem: {
-    marginLeft: '20px',
-  },
-  navLink: {
-    textDecoration: 'none',
-    color: '#fff',
-    fontSize: '16px',
-  },
-};
-

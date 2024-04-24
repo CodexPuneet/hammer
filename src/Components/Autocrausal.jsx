@@ -16,7 +16,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import { Box } from '@chakra-ui/react'
 export default function Autocrausel() {
   return (
-    <Box h={'350px'} w={'400px'}  ml={'100px'} p={'5px'}>
+    <Box className="crausal_container" >
       <Swiper
      
      
@@ -45,9 +45,9 @@ export default function Autocrausel() {
         <SwiperSlide>
         <img src={heroimage4}></img>
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
         <img src={heroimage5}></img>
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </Box>
   );

@@ -1,40 +1,48 @@
-/* Header.css */
-
 .container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px; /* Adjusted padding for smaller screens */
-    background-color: #a5d3d0;
-    color: #fff;
-    flex-direction: column; /* Flex direction column for smaller screens */
-  }
-  
-  .logo {
-    width: 90px;
-    height: 80px;
-    margin-bottom: 20px; /* Added margin bottom for spacing */
-  }
-  
-  .navList {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navItem {
-    margin-left: 20px;
-    margin-bottom: 10px; /* Added margin bottom for spacing */
-  }
-  
-  .navLink {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  background-color: #a5d3d0;
+  color: #fff;
+}
+
+.logo {
+  width: 90px; /* Adjust as needed */
+  height: 80px;
+  margin: 0;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin-left: 20px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.mobilemenu{
+  display: none;
  
-  
+}
+@media only screen and (max-width: 600px) {
+  .navList {
+    display: none; /* Hide the navigation items for mobile devices */
+  }
+  .mobilemenu{
+    display: block;
+  }
+  .menu{
+    background-color: #a5d3d0;
+  }
+}

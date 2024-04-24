@@ -4,6 +4,7 @@ import { Box, Button, Flex } from '@chakra-ui/react'
 import { keyframes } from '@emotion/react';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import heroimage5 from '../Assets/banner5.png';
+import './Homepage.css';
 
 const Homepage = () => {
 
@@ -29,9 +30,9 @@ const shakeAnimation = keyframes`
 
   return (
     <>
-    <div style={{display:'flex', marginTop:"70px"}}>
+    <div className="homepage-container">
       <Autocrausel />
-      <Box p="4" mt={'2%'} w={'45%'} >
+      <Box className="homepage-data"  >
     <h2 style={{ fontSize: '22px', marginBottom: '16px' , fontWeight: 'bold', fontFamily:'arial'}}>Ayurvedic Power Of Thor Capsule For Sex Time Medicine For Men</h2>
     <p style={{ fontSize: '18px', marginBottom: '12px' }}>Price: <del>Rs. 2,499.00</del> <strong style={{ color: 'green' }}>Rs. 1200.00</strong> (50% OFF)</p>
     <p style={{ fontSize: '20px', marginBottom: '16px' }}><strong>🔥 BUY 1 GET 1 FREE 🔥</strong></p>
@@ -66,7 +67,7 @@ const shakeAnimation = keyframes`
 
      </Box>
     </div>
-    <div style={{ width: '50%', textAlign: 'center', margin:'0 0 0 40%' }}>
+    <div className='homepage-table' >
   <table style={{ width: '100%', borderCollapse: 'collapse' }}>
     <tbody>
       <tr>
@@ -108,12 +109,7 @@ const shakeAnimation = keyframes`
     </tbody>
   </table>
 </div>
-<div style={{width: '350px',
-            height: '350px',
-            display: 'flex',
-            margin: '20px auto',
-            border: '5px solid #cc9955'
-           }}>
+<div className='hompage-banner' >
          
   <img src={heroimage5} />
 </div>
