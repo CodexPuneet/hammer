@@ -73,8 +73,7 @@ const shakeAnimation = keyframes`
   Order Now
 </Button>
 
-     </Box>
-     <Button
+<Button
      className='call_now'
         onClick={handleDialpadCall}
         color="white"
@@ -103,8 +102,10 @@ const shakeAnimation = keyframes`
         <CallIcon style={{ marginRight: '8px' }} />
          Call Now
       </Button>
+     </Box>
     
     </div>
+
     <div className='homepage-table' >
   <table style={{ width: '100%', borderCollapse: 'collapse' }}>
     <tbody>
