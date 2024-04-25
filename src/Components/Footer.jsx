@@ -9,10 +9,10 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Contact Us</h3>
           <p>DS Ayurveda Pvt. Ltd.</p>
-          <p>123 Ayurveda Street, Herbal City</p>
-          <p>Delhi, India</p>
+          <p>12, Herbal Store, Kangra</p>
+          <p>Himanchal Pradesh, India</p>
           <p>Email: <a href="mailto:info@dsayurveda.com">info@dsayurveda.com</a></p>
-          <p>Phone: <a href="tel:+91-1234567890">+91-63467890</a></p>
+          <p>Phone: <a href="tel:+91-8744857352">+91-8744857352</a></p>
         </div>
         <div className="footer-section">
           <h3>Quick Links</h3>
