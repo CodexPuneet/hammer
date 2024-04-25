@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Autocrausel from '../Components/Autocrausal'
 import { Box, Button, Flex } from '@chakra-ui/react'
 import { keyframes } from '@emotion/react';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import CallIcon from '@mui/icons-material/Call';
 import heroimage5 from '../Assets/banner5.png';
+import heroimage8 from '../Assets/banner8.png';
+import heroimage9 from '../Assets/banner9.png';
 import './Homepage.css';
 
 const Homepage = () => {
-
+  const [isLoading, setIsLoading] = useState(false);
   const handleWhatsAppChat = () => {
     const phoneNumber = '918744857352'; // Example: India country code is 91
     const whatsappChatLink = `https://wa.me/${phoneNumber}`;
@@ -19,6 +22,11 @@ const Homepage = () => {
     if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
         alert('Please manually open WhatsApp and initiate a chat with the provided phone number.');
     }
+};
+const handleDialpadCall = () => {
+  // Replace 'yourPhoneNumber' with the actual phone number you want to dial
+  const phoneNumber = '918744857352';
+  window.location.href = `tel:${phoneNumber}`;
 };
 const shakeAnimation = keyframes`
   0% { transform: translateX(0) rotate(0);  }
@@ -33,10 +41,10 @@ const shakeAnimation = keyframes`
     <div className="homepage-container">
       <Autocrausel />
       <Box className="homepage-data"  >
-    <h2 style={{ fontSize: '22px', marginBottom: '16px' , fontWeight: 'bold', fontFamily:'arial'}}>Ayurvedic Power Of Thor Capsule For Sex Time Medicine For Men</h2>
-    <p style={{ fontSize: '18px', marginBottom: '12px' }}>Price: <del>Rs. 2,499.00</del> <strong style={{ color: 'green' }}>Rs. 1200.00</strong> (50% OFF)</p>
-    <p style={{ fontSize: '20px', marginBottom: '16px' }}><strong>🔥 BUY 1 GET 1 FREE 🔥</strong></p>
-    <p style={{ fontSize: '16px', marginBottom: '20px' }}>Unleash Your Inner Strength: TSA Power Of Thor Capsule - Elevating Men's Vitality and Performance</p>
+    <h2 style={{ fontSize: '22px', marginBottom: '16px' , fontWeight: 'bold', fontFamily:'arial'}}>Ayurvedic Hammer Of Thor Capsule For Sex Time Medicine For Men</h2>
+    {/* <p style={{ fontSize: '18px', marginBottom: '12px' }}>Price: <del>Rs. 2,499.00</del> <strong style={{ color: 'green' }}>Rs. 1200.00</strong> (50% OFF)</p> */}
+    {/* <p style={{ fontSize: '20px', marginBottom: '16px' }}><strong>🔥 BUY 1 GET 1 FREE 🔥</strong></p> */}
+    <p style={{ fontSize: '16px', marginBottom: '20px' }}>Unleash Your Inner Strength: DS Ayurweda Hammer Of Thor Capsule - Elevating Men's Vitality and Performance</p>
     <Button
   onClick={handleWhatsAppChat}
   color="white"
@@ -66,6 +74,36 @@ const shakeAnimation = keyframes`
 </Button>
 
      </Box>
+     <Button
+     className='call_now'
+        onClick={handleDialpadCall}
+        color="white"
+        bg="#007bff"
+        size="lg"
+        _hover={{
+          bg: 'blue.500',
+          color: 'white',
+          transform: 'scale(1.05)',
+          boxShadow: '0 6px 12px rgba(0, 0, 0, 0.2)',
+          transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+        }}
+        _active={{
+          transform: 'scale(0.95)',
+        }}
+        _focus={{
+          outline: 'none', // Remove default focus outline
+        }}
+        css={{
+          animation: `${shakeAnimation} 0.5s ease`, // Decreased animation duration to 0.2s
+          animationIterationCount: 'infinite',
+          animationDelay: '0.1s', // Decreased animation delay to 0.1s
+        }}
+        disabled={isLoading}
+      >
+        <CallIcon style={{ marginRight: '8px' }} />
+         Call Now
+      </Button>
+    
     </div>
     <div className='homepage-table' >
   <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -113,13 +151,19 @@ const shakeAnimation = keyframes`
          
   <img src={heroimage5} />
 </div>
-
-
+<div className='hompage-banner2' >
+         
+  <img src={heroimage8} />
+</div>
+<div className='hompage-banner3' >
+         
+  <img src={heroimage9} />
+</div>
     <div style={{ fontFamily: 'arial', padding: '10px', display: 'flex' }}>
   <div style={{ flex: '1', marginRight: '20px' }}>
     <div style={{ marginBottom: '10px' }}>
       <div style={{ fontWeight: 'bold', marginBottom: '5px' }}>Product Description :</div>
-      <div>DS Ayurveda Power Of Thor Capsule For Men. It can be beneficial for maintaining men's well-being and boost their energy, stamina, and endurance. Helps to fight weakness and increase energy. May assist in the management of testosterone levels. It improves circulation and physical performance.</div>
+      <div>DS Ayurveda Hammer Of Thor Capsule For Men. It can be beneficial for maintaining men's well-being and boost their energy, stamina, and endurance. Helps to fight weakness and increase energy. May assist in the management of testosterone levels. It improves circulation and physical performance.</div>
     </div>
     <div style={{ marginBottom: '10px' }}>
       <div style={{ fontWeight: 'bold', marginBottom: '5px' }}>Dosage :</div>

@@ -21,7 +21,7 @@ const ContactUs = () => {
         <p><strong>Email:</strong> <a href="mailto:dsayurveda01@gmail.com">dsayurveda01@gmail.com</a></p>
         <p><strong>WhatsApp:</strong> <a href="https://wa.me/8744857352">8744857352</a></p>
         <p><strong>Phone:</strong> +1 (123) 456-7890</p>
-        <p><strong>Address:</strong> 123 Ayurveda Street, Herbal City, Ayurville, ABC-12345</p>
+        <p><strong>Address:</strong> 123 Ayurveda Street, Herbal City, Delhi-110096</p>
       </div>
       <div className="contact-form">
         <h2>Send Us a Message</h2>

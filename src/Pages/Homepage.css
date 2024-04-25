@@ -19,7 +19,21 @@
     border: 5px solid #cc9955;
       
   }
-  
+  .hompage-banner2{
+    width: 350px;
+    height:auto;
+    margin: 20px auto;
+    border: 5px solid #fdaf36;
+      
+  }
+  .hompage-banner3{
+    width: 450px;
+    height:auto;
+    margin: 20px auto;
+    border: 5px solid #fe0000;
+      
+  }
+ 
   /* Add your CSS styles here */
   @media only screen and (max-width: 600px) {
 
@@ -44,5 +58,23 @@
         margin: 20px auto;
         border: 5px solid #cc9955;
           
+      }
+      .hompage-banner2{
+        width: 90%;
+        height:auto;
+        margin: 20px auto;
+        border: 5px solid #fdaf36;
+          
+      }
+      .hompage-banner3{
+        width: 90%;
+        height:auto;
+        margin: 20px auto;
+        border: 5px solid #fe0000;
+          
+      }
+      .call_now{
+        width: 70%;
+        margin: 20px auto;
       }
     }
