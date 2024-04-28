@@ -7,10 +7,60 @@ import CallIcon from '@mui/icons-material/Call';
 import heroimage5 from '../Assets/banner5.png';
 import heroimage8 from '../Assets/banner8.png';
 import heroimage9 from '../Assets/banner9.png';
+import phonering from '../Assets/phone.gif';
+import whatsappgif from '../Assets/whatsapp.gif';
 import './Homepage.css';
 
 const Homepage = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const [showAllReviews, setShowAllReviews] = useState(false);
+  const [newReview, setNewReview] = useState({ author: '', comment: '', rating: 0 });
+  const [reviews, setReviews] = useState([
+    { 
+      id: 1,
+      author: 'Shankar Maurya',
+      comment: 'Amazing product! It helped me boost my energy and stamina significantly.',
+      rating: 5,
+    },
+    {
+      id: 2,
+      author: 'Sunil Yadav',
+      comment: 'I\'ve been using this product for a month now, and I can feel the difference already. Highly recommend!',
+      rating: 4,
+    },
+    {
+      id: 3,
+      author: 'Amit Sharma',
+      comment: 'यह उत्पाद मेरे व्यायाम को और भी बेहतर बना दिया है। मुझे इसकी गुणवत्ता बहुत पसंद आई है।',
+      rating: 5,
+    },
+    {
+      id: 4,
+      author: 'Rahul Gupta',
+      comment: 'This product is a game-changer for me. I feel more focused and energetic throughout the day.',
+      rating: 5,
+    },
+    {
+      id: 5,
+      author: 'Abhi Singh',
+      comment: 'I was skeptical at first, but this product exceeded my expectations. Will definitely buy again!',
+      rating: 4,
+    },
+    {
+      id: 6,
+      author: 'Sagar Patel',
+      comment: 'I did not notice any difference after using this product. Disappointed!',
+      rating: 2,
+    },
+    {
+      id: 7,
+      author: 'Ankit Verma',
+      comment: 'यह उत्पाद मेरी उम्मीदों से बाहर निकला। मुझे इसका उपयोग बिल्कुल नहीं करना था।',
+      rating: 1,
+    },
+    // Add more reviews as needed
+  ]);
+
   const handleWhatsAppChat = () => {
     const phoneNumber = '918744857352'; // Example: India country code is 91
     const whatsappChatLink = `https://wa.me/${phoneNumber}`;
@@ -35,7 +85,62 @@ const shakeAnimation = keyframes`
   75% { transform: translateX(-3px) rotate(-1deg);  }
   100% { transform: translateX(3px) rotate(1deg);  }
 `;
+const handleReviewSubmit = () => {
+  // Check if any input field is empty
+  if (!newReview.author || !newReview.comment || !newReview.rating) {
+    alert('Please fill in all fields before submitting the review.');
+    return; // Exit the function if any field is empty
+  }
 
+  // Logic to handle review submission
+  // For simplicity, let's just add the new review to the reviews array
+  const updatedReviews = [...reviews, newReview];
+  // Update the reviews state with the new review
+  setReviews(updatedReviews);
+
+  // Clear form fields after submission
+  setNewReview({ author: '', comment: '', rating: 0 });
+
+  console.log('New Review:', newReview);
+};
+
+
+
+const renderReviews = () => {
+  if (showAllReviews) {
+    return reviews.map(review => (
+      <div key={review.id} className="review-card">
+        <div className="review-header">
+      <div className="review-author">{review.author}</div>
+        <div className="review-rating">{renderRatingStars(review.rating)}</div>
+        
+      </div>
+      <div className="review-comment">{review.comment}</div>
+      </div>
+    ));
+  } else {
+    // Only render the first three reviews
+    return reviews.slice(0, 3).map(review => (
+      <div key={review.id} className="review-card">
+       <div className="review-header">
+      <div className="review-author">{review.author}</div>
+        <div className="review-rating">{renderRatingStars(review.rating)}</div>
+        
+      </div>
+      <div className="review-comment">{review.comment}</div>
+      </div>
+    ));
+  }
+};
+
+// Function to render reviews
+const renderRatingStars = (rating) => {
+  const stars = [];
+  for (let i = 0; i < rating; i++) {
+    stars.push(<span key={i} className="star">&#9733;</span>);
+  }
+  return stars;
+};
   return (
     <>
     <div className="homepage-container">
@@ -105,6 +210,16 @@ const shakeAnimation = keyframes`
      </Box>
     
     </div>
+  {/* Floating button */}
+
+  <div className="floating-call-button">     
+        <img src={phonering}  onClick={handleDialpadCall} alt="phone" style={{width:'40px'}} />
+      </div>
+      <div className="floating-whatsapp-button">     
+        <img src={whatsappgif}  onClick={handleWhatsAppChat} alt="whatsapp" style={{width:'60px'}} />
+      </div>
+
+
 
     <div className='homepage-table' >
   <table style={{ width: '100%', borderCollapse: 'collapse' }}>
@@ -174,9 +289,37 @@ const shakeAnimation = keyframes`
  
 </div>
 
-
-
-
+<div className="reviews-section">
+        <h2>Customer Reviews</h2>
+        <div className="reviews-container">{renderReviews()}</div>
+        {!showAllReviews && reviews.length > 3 && (
+          <Button onClick={() => setShowAllReviews(true)} variant="link" color="blue.500">
+            Read More
+          </Button>
+        )}
+      </div>
+        {/* Review form */}
+        <div className="review-form">
+        <h2>Your Feedback is important for us !</h2>
+        <input
+          type="text"
+          placeholder="Your Name"
+          value={newReview.author}
+          onChange={(e) => setNewReview({ ...newReview, author: e.target.value })}
+        />
+        <textarea
+          placeholder="Your Comment"
+          value={newReview.comment}
+          onChange={(e) => setNewReview({ ...newReview, comment: e.target.value })}
+        />
+        <input
+          type="number"
+          placeholder="Rating (1-5)"
+          value={newReview.rating}
+          onChange={(e) => setNewReview({ ...newReview, rating: parseInt(e.target.value) })}
+        />
+        <Button onClick={handleReviewSubmit}>Submit Review</Button>
+      </div>
 
     </>
   )
