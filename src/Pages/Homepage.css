@@ -41,13 +41,13 @@
 
 .floating-call-button {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 45%;
+  right: 8px;
   z-index: 1000; /* Ensure the button stays above other content */
 }
 .floating-whatsapp-button{
   position: fixed;
-  bottom: 0px;
+  bottom: 52%;
   right: 0px;
   z-index: 1000;
 }
@@ -96,6 +96,13 @@
 .review-comment {
   font-size: 14px;
   line-height: 1.5;
+}
+.product-image {
+  width: 20%; /* Adjust width as needed */
+  height: auto;
+  border-radius: 8px; /* Match review card border radius */
+  margin: 10px auto; /* Adjust margin as needed */
+
 }
 /* Review form */
 .review-form {
@@ -153,12 +160,28 @@
 }
 
 
-@media screen and (max-width: 768px) {
-  .floating-call-button {
-    bottom: 10px;
-    left: 10px;
-  }
+.adult1 {
+  width: 350px;
+  height: auto;
+  margin: 20px auto;
+  border: 5px solid #fdaf36; /* Adjust border color and size as needed */
+  text-align: center;
+  background-color: #f0f0f0; /* Change to desired background color */
+  padding: 20px;
 }
+
+.adult1 img {
+  max-width: 100%;
+  height: auto;
+}
+
+.adult1 h1 {
+  font-size: 24px; /* Adjust font size as needed */
+  color: #333; /* Change to desired text color */
+  margin-top: 10px;
+}
+
+
 
   /* Add your CSS styles here */
   @media only screen and (max-width: 600px) {

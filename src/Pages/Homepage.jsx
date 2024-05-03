@@ -9,6 +9,15 @@ import heroimage8 from '../Assets/banner8.png';
 import heroimage9 from '../Assets/banner9.png';
 import phonering from '../Assets/phone.gif';
 import whatsappgif from '../Assets/whatsapp.gif';
+import adult1 from '../Assets/adult1.png'
+import adult2 from '../Assets/adult2.png'
+import adult from '../Assets/adult.png'
+import review1 from '../Assets/review1.png'
+import review2 from '../Assets/review2.png'
+import review3 from '../Assets/review3.png'
+import review4 from '../Assets/review4.png'
+import review5 from '../Assets/review5.png'
+import review6 from '../Assets/review6.png'
 import './Homepage.css';
 
 const Homepage = () => {
@@ -20,35 +29,41 @@ const Homepage = () => {
       id: 1,
       author: 'Shankar Maurya',
       comment: 'Amazing product! It helped me boost my energy and stamina significantly.',
+      productImage: review1,
       rating: 5,
     },
     {
       id: 2,
       author: 'Sunil Yadav',
+      productImage: review3,
       comment: 'I\'ve been using this product for a month now, and I can feel the difference already. Highly recommend!',
       rating: 4,
     },
     {
       id: 3,
       author: 'Amit Sharma',
+      productImage: review2,
       comment: 'यह उत्पाद मेरे व्यायाम को और भी बेहतर बना दिया है। मुझे इसकी गुणवत्ता बहुत पसंद आई है।',
       rating: 5,
     },
     {
       id: 4,
       author: 'Rahul Gupta',
+      productImage: review4,
       comment: 'This product is a game-changer for me. I feel more focused and energetic throughout the day.',
       rating: 5,
     },
     {
       id: 5,
       author: 'Abhi Singh',
+      productImage: review5,
       comment: 'I was skeptical at first, but this product exceeded my expectations. Will definitely buy again!',
       rating: 4,
     },
     {
       id: 6,
       author: 'Sagar Patel',
+      productImage: review6,
       comment: 'I did not notice any difference after using this product. Disappointed!',
       rating: 2,
     },
@@ -111,27 +126,29 @@ const renderReviews = () => {
     return reviews.map(review => (
       <div key={review.id} className="review-card">
         <div className="review-header">
-      <div className="review-author">{review.author}</div>
-        <div className="review-rating">{renderRatingStars(review.rating)}</div>
-        
-      </div>
-      <div className="review-comment">{review.comment}</div>
+          <div className="review-author">{review.author}</div>
+          <div className="review-rating">{renderRatingStars(review.rating)}</div>
+          <img src={review.productImage}  className="product-image" />
+        </div>
+        <div className="review-comment">{review.comment}</div>
       </div>
     ));
   } else {
     // Only render the first three reviews
     return reviews.slice(0, 3).map(review => (
       <div key={review.id} className="review-card">
-       <div className="review-header">
-      <div className="review-author">{review.author}</div>
-        <div className="review-rating">{renderRatingStars(review.rating)}</div>
+        <div className="review-header">
+          <div className="review-author">{review.author}</div>
+          <div className="review-rating">{renderRatingStars(review.rating)}</div>
+          <img src={review.productImage}  className="product-image" />
+        </div>
+        <div className="review-comment">{review.comment}</div>
         
-      </div>
-      <div className="review-comment">{review.comment}</div>
       </div>
     ));
   }
 };
+
 
 // Function to render reviews
 const renderRatingStars = (rating) => {
@@ -270,6 +287,22 @@ const renderRatingStars = (rating) => {
 <div className='hompage-banner2' >
          
   <img src={heroimage8} />
+</div>
+<div className='adult1' >
+         
+  <img src={adult1} />
+  <h1>एक हफ्ते में फर्क देखे और जीवन का सुख उठाए ।</h1>
+</div>
+
+<div className='adult1' >
+         
+  <img src={adult2} />
+  <h1>टाइमिंग के साथ साइज भी बड़े गारंटी के साथ मात्रा 2 हफ्तों में ।</h1>
+</div>
+<div className='adult1' >
+         
+  <img src={adult} />
+  <h1>गैरिंटेड साइज की वृद्धि होगी वार्न पैसा वापस ।</h1>
 </div>
 <div className='hompage-banner3' >
          
